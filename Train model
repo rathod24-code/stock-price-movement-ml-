@@ -1,1 +1,7 @@
+from sklearn.linear_model import LogisticRegression
 
+model = LogisticRegression()
+model.fit(X,y)
+
+
+predictions = model.predict(X)
