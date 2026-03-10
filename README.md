@@ -2,6 +2,11 @@
 
 This project predicts whether a stock price will go up or down using Machine Learning.
 
+## Author
+Rahul Rathod  
+Engineering Science Student  
+IISER Bhopal
+
 ## Technologies Used
 - Python
 - Pandas
