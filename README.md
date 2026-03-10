@@ -30,3 +30,7 @@ IISER Bhopal
 ```python
 df["Return"] = df["Close"].pct_change()
 df["MA5"] = df["Close"].rolling(5).mean()
+
+## Dataset
+Historical stock price data (AAPL) obtained from Yahoo Finance.
+
