@@ -1,1 +1,15 @@
+import pandas as pd
 
+df = pd.read_csv("stock_data.csv")
+print(df.head())
+
+df["Return"] = df["Close"].pct_change()
+df["MA5"] = df["Close"].rolling(5).mean()
+df["MA10"] = df["Close"].rolling(10).mean()
+df["Target"] = (df["Close"].shift(-1) > df["Close"]).astype(int)
+
+X = df[["Return","MA5","MA10"]]
+y = df["Target"]
+
+X = X.dropna()
+y = y[X.index]
